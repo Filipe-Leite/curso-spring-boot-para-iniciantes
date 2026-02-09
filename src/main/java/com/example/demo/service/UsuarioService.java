@@ -22,7 +22,7 @@ public class UsuarioService {
 
     public Usuario registrarUsuario(String username, String password) {
         String senhaCriptografada = passwordEncoder.encode(password);
-        Usuario usuario = new Usuario(username, senhaCriptografada);
+        Usuario usuario = new Usuario(username, senhaCriptografada, null);
         return usuarioRepository.save(usuario);
     }
 
